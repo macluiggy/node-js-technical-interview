@@ -26,3 +26,5 @@ estrucura para el post en json
 	"estado_civil": "soltero"
 }
 ```
+
+utilice la api con el endpont: http://localhost:3000/api/cedula
