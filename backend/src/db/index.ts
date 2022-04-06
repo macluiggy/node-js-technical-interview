@@ -1,5 +1,8 @@
-import {Sequelize} from 'sequelize';
-let URI = 'postgres://abymdcyj:V1vNl-lHB74ZhigN0BeyEVtxCtrNNCu2@manny.db.elephantsql.com/abymdcyj'
-export const sequelize = new Sequelize(URI, {
-  dialect: 'postgres',
-})
+import { Sequelize } from "sequelize";
+import dotenv from "dotenv";
+dotenv.config();
+const { URI } = process.env;
+
+export const sequelize = new Sequelize(URI!, {
+  dialect: "postgres",
+});
