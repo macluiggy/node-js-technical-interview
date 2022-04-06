@@ -1,3 +1,28 @@
-# Fullstack Java/TypeScript webpack template
+vaya a la carpeta backend
+```
+cd backend
+```
 
-This is a template for a fullstack app made completely with JavaScript
+installar dependencias
+```
+npm install o pnpm install
+
+```
+
+inicie el servidor
+
+```
+npm run dev
+```
+
+estrucura para el post en json
+```json
+{
+	"ncedula": "1310564719",
+	"nombre": "Luiggy",
+	"apellido": "Macias",
+	"lugar_nacimiento": "Manabí, Rocafuerte",
+	"sexo": "masculino",
+	"estado_civil": "soltero"
+}
+```
