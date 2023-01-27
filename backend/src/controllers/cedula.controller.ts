@@ -1,4 +1,5 @@
 import Cedula from "../models/Cedula";
+import Usuarios from "models/Usuarios";
 
 const create = async (req, res) => {
   try {
