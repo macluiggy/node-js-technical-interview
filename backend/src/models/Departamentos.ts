@@ -1,20 +1,20 @@
-import Sequelize from 'sequelize'
-import { sequelize } from '../db'
+import Sequelize from "sequelize";
+import { sequelize } from "../db";
 
-/**
- * CREATE TABLE if not exists departamentos (
-  id serial primary key,
-  nombre text,
-  id_cliente integer
-);
- */
-const Departamentos = sequelize.define('departamentos', {
-  id: {
-    type: Sequelize.INTEGER,
-    primaryKey: true,
+const Departamentos = sequelize.define(
+  "departamentos",
+  {
+    id: {
+      type: Sequelize.INTEGER,
+      primaryKey: true,
+    },
+    nombre: {
+      type: Sequelize.TEXT,
+    },
   },
-}, {
-  timestamps: false,
-})
+  {
+    timestamps: false,
+  }
+);
 
-export default Departamentos
+export default Departamentos;
