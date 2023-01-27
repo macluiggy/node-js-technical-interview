@@ -15,6 +15,9 @@ const Cliente = sequelize.define('cliente', {
   apellido: {
     type: Sequelize.TEXT,
   },
+  id_departamento: {
+    type: Sequelize.INTEGER
+  },
 }, {
   timestamps: false,
 })
