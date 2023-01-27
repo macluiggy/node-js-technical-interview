@@ -3,6 +3,7 @@ import { Router } from "express";
 import { validate, ValidationError, Joi } from "express-validation";
 import Usuarios from "../models/Usuarios";
 import bcrypt from "bcryptjs";
+import jwt from "jsonwebtoken";
 
 const router = Router();
 
@@ -52,8 +53,13 @@ router.post("/login", validate(loginValidation, {}, {}), async (req, res) => {
     if (!matchPassword) {
       throw new Error("Contraseña incorrecta");
     }
+    // crear el token
+    const token = jwt.sign({ id: user.id }, process.env.JWT_SECRET, {
+      expiresIn: 86400, // 24 hours
+    });
     res.json({
       user,
+      token,
     });
   } catch (error: any) {
     console.log(error);
