@@ -1,4 +1,4 @@
-import { create, getAll } from "../controllers/cedula.controller";
+// import { create, getAll } from "../controllers/cedula.controller";
 import { Router } from "express";
 import { validate, ValidationError, Joi } from "express-validation";
 import Usuarios from "../models/Usuarios";

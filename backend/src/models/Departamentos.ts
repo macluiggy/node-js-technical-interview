@@ -7,10 +7,14 @@ const Departamentos = sequelize.define(
     id: {
       type: Sequelize.INTEGER,
       primaryKey: true,
+      autoIncrement: true,
     },
     nombre: {
       type: Sequelize.TEXT,
     },
+    id_cliente: {
+      type: Sequelize.INTEGER,
+    }
   },
   {
     timestamps: false,
