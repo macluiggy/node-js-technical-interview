@@ -1,10 +1,11 @@
 import Sequelize from 'sequelize'
 import { sequelize } from '../db'
 
-const Cedula = sequelize.define('cedula', {
+const Clientes = sequelize.define('clientes', {
   id: {
     type: Sequelize.INTEGER,
     primaryKey: true,
+    autoIncrement: true,
   },
   ncedula: {
     type: Sequelize.BIGINT
@@ -15,17 +16,11 @@ const Cedula = sequelize.define('cedula', {
   apellido: {
     type: Sequelize.TEXT,
   },
-  lugar_nacimiento: {
-    type: Sequelize.TEXT
+  id_departamento: {
+    type: Sequelize.INTEGER
   },
-  sexo: {
-    type: Sequelize.TEXT,
-  },
-  estado_civil: {
-    type: Sequelize.INTEGER,
-  }
 }, {
   timestamps: false,
 })
 
-export default Cedula
+export default Clientes
