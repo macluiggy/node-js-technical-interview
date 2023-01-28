@@ -1,10 +1,11 @@
 import Sequelize from 'sequelize'
 import { sequelize } from '../db'
 
-const Cliente = sequelize.define('cliente', {
+const Clientes = sequelize.define('clientes', {
   id: {
     type: Sequelize.INTEGER,
     primaryKey: true,
+    autoIncrement: true,
   },
   ncedula: {
     type: Sequelize.BIGINT
@@ -22,4 +23,4 @@ const Cliente = sequelize.define('cliente', {
   timestamps: false,
 })
 
-export default Cliente
+export default Clientes
